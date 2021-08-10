@@ -19,6 +19,30 @@
     @component('components.css')
     @endcomponent
     <style>
+        #loader {
+            border: 12px solid #08C18A;
+            border-radius: 50%;
+            border-top: 12px solid #444444;
+            width: 70px;
+            height: 70px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .center {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
         html,
         body {
             background: #0E1217;
@@ -32,6 +56,7 @@
 </head>
 
 <body>
+    <div id="loader" class="center"></div>
     <div class="container">
         <div class="row">
             <div class="col-12 overflow-hidden">
