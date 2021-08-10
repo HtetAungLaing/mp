@@ -33,8 +33,8 @@ Route::get("/post/{id}", "PostController@show")->name("post.show");
 
 // Route::get('/home', 'HomeController@index')->name('home');
 
-Auth::routes();
-// Auth::routes(['register' => false]);
+// Auth::routes();
+Auth::routes(['register' => false]);
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/feedback', 'FeedbackController@store')->name('feedback.store');
 
