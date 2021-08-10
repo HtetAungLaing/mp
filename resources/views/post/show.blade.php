@@ -19,6 +19,30 @@
     @component('components.css')
     @endcomponent
     <style>
+        #loader {
+            border: 12px solid #08C18A;
+            border-radius: 50%;
+            border-top: 12px solid #444444;
+            width: 70px;
+            height: 70px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .center {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+
         html,
         body {
             background: #0E1217;
@@ -33,6 +57,7 @@
 
 <body>
     <div class="container">
+        <div id="loader" class="center"></div>
         <div class="row">
             <div class="col-12 overflow-hidden">
                 <div class="mb-5">
@@ -58,7 +83,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="my-2">
-                    <p class="text-light">{{ $post->title }}</p>
+                    <p class="text-success text-bold">{{ $post->title }}</p>
                     <div class="text-light">{!! $post->content !!}</div>
                 </div>
             </div>
