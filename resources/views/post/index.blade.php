@@ -7,13 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @component('components.meta')
-        <!-- Primary Meta Tags -->
-        <meta name="title" content="Inngyinnews Myanmar Porn Website">
-        <meta name="description" content="Free Myanmar Porn Videos.">
-        <meta name="keywords" content="porn,myanmar porn,myanmar xxx,myanmar xvideo,myanmar all car,burmese sex,myanmar sex,sex,myanmar fuck,ingyinnews">
-        <meta name="robots" content="index, follow">
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <meta name="language" content="English">
     @endcomponent
     <title>My Darkside Collection</title>
     @component('components.css')
