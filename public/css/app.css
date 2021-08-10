@@ -1,0 +1,90 @@
+.logo{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.slide-box{
+    height: 35vh;
+    width: 100%;
+    background-size: cover !important;
+    background-position:center center !important;
+    background-repeat: no-repeat !important;
+}
+.blur{
+    backdrop-filter: blur(10px);
+    background-color: rgb(122 122 122 / 8%);
+}
+.blur-dark{
+    backdrop-filter: blur(15px);
+    background-color: #0e12178c;
+}
+.my-white{
+    color: #dedede;
+}
+.my-green{
+    color: #08C18A;
+}
+.thumbnail{
+    height:30vh;
+    background-size: cover !important;
+    background-position:center center !important;
+    background-repeat: no-repeat !important;
+}
+.thumbnail-button-wrapper{
+    height:inherit;
+    width:0;
+    transition: all 1.1s;
+}
+.thumbnail:hover .thumbnail-button-wrapper{
+    display: flex;
+    width:100%;
+    cursor: pointer;
+}
+.thumbnail-view{
+    display: none;
+}
+.thumbnail:hover .thumbnail-view{
+    display:block;
+}
+.info{
+    bottom: 5px;
+    right: 5px;
+}
+@media (min-width: 576px) {
+ }
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { }
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+   .slide-box{
+    height: 85vh;
+}
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { }
+
+
+@media (max-width: 575.98px) { 
+    .carousel-indicators li {
+        width: 15px;
+        height: 2px;
+    }
+    .thumbnail{
+        height:20vh;
+    }
+    .carousel-indicators{
+        bottom: -5px;
+    }
+ }
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {  }
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {  }
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {  }
