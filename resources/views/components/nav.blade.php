@@ -1,7 +1,7 @@
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark shadow shadow-sm py-0 px-md-3 px-2 m-0 blur-dark">
     <a class="navbar-brand text-success" href="{{ route('post.index') }}">My Darksite Collection</a>
     <!-- Button trigger modal -->
-    <i type="button" class="feather-search text-info" data-toggle="modal" data-target="#exampleModal">
+    <i type="" class="feather-search text-info" data-toggle="modal" data-target="#exampleModal">
     </i>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
         aria-label="Toggle navigation" style="outline: none; border: none">
