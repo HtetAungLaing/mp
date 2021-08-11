@@ -144,6 +144,7 @@ class ArticleController extends Controller
         // return $article;
         // $this->aaa($article->thumbnail);
         unlink("storage/poster/" . $article->poster);
+        PostGenre::where("post_id", $article->id)->delete();
         $article->delete();
         return redirect()->route("article.index")->with('del-status', "<p class='alert alert-warning'>Deleted Successfully</p>");
     }

@@ -68,7 +68,6 @@
                 </div>
             </div>
         </div>
-        <hr>
         <div class="row">
             <div class="col-12">
                 @foreach ($genres as $g)
@@ -80,6 +79,7 @@
             <div class="col-12">
                 <div class="my-2">
                     <p class="text-success text-bold">{{ $post->title }}</p>
+                    <a href="{{ $post->download }}" class="btn btn-outline-success btn-sm mb-2 ">Download <i class="feather-chevrons-down"></i></a>
                     <div class="text-light">{!! $post->content !!}</div>
                 </div>
             </div>
