@@ -1,6 +1,5 @@
 {{ $slot }}
 <!-- Primary Meta Tags -->
-<title>Mydarksidecollection</title>
 <meta name="title" content="Mydarksidecollection">
 <meta name="description" content="🔥 All of porn you want to watch is here 🔥">
 
@@ -18,6 +17,7 @@
 <meta property="twitter:description" content="🔥 All of porn you want to watch is here 🔥">
 <meta property="twitter:image" content="{{ asset('storage/poster/mdsc.jpg') }}">
 {{-- <link rel="icon" href="{{ asset('storage/photo/logo.jpg') }}" sizes="20x20" type="image/jpg"> --}}
+<link rel="icon" type="image/png" sizes="512x512" href="{{ asset('storage/poster/favi.png') }}">
 <link rel="stylesheet" href="{{ asset('css/mine/my.css') }}">
 <link rel="stylesheet" href="{{ asset('vendor/feather-icons-web/feather.css') }}">
 <link rel="stylesheet" href="{{ asset('css/app.css') }}">
