@@ -1,4 +1,16 @@
 {{ $slot }}
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K10H5GDTZ1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-K10H5GDTZ1');
+</script>
 <!-- Primary Meta Tags -->
 <meta name="title" content="Mydarksidecollection">
 <meta name="description" content="🔥 All of porn you want to watch is here 🔥">
