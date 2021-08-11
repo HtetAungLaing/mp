@@ -112,6 +112,8 @@ class ArticleController extends Controller
         $article->title = $request->title;
         $article->download = $request->download;
         $article->content = $request->content;
+        $article->viewers = $request->viewers;
+        $article->ratings = $request->ratings;
         if ($request->hasFile('poster')) {
             unlink("storage/poster/" . $article->poster);
             $file = $request->file('poster');
@@ -120,14 +122,6 @@ class ArticleController extends Controller
             Storage::putFileAs($dir, $file, $fileName);
             $article->poster = $fileName;
         }
-        // if ($request->hasFile('thumbnail')) {
-        //     $this->aaa($article->thumbnail);
-        //     $file = $request->file('thumbnail');
-        //     $dir = "public/photo";
-        //     $tname = uniqid() . "_" . $file->getClientOriginalName();
-        //     Storage::putFileAs($dir, $file, $tname);
-        //     $article->thumbnail = $tname;
-        // }
         $article->category_id = $request->category_id;
         $article->update();
         return redirect()->route("article.show", $article->id)->with('edit-status', "<p class='alert alert-success'>Successfully Edited</p>");

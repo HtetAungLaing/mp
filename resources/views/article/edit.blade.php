@@ -35,10 +35,6 @@
                                 <input type="text" required class="form-control" name="title" value="{{ $article->title }}">
                             </div>
                             <div class="form-group">
-                                <label for="">Thumbnail</label>
-                                <input type="file" class="form-control p-1" name="thumbnail">
-                            </div>
-                            <div class="form-group">
                                 <label for="">Poster</label>
                                 <input type="file" class="form-control p-1" name="poster">
                             </div>
@@ -58,6 +54,15 @@
                                             {{ $item->name }} </option>
                                     @endforeach
                                 </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="viewers">Viewers</label>
+                                <input type="text" required class="form-control" name="viewers" value="{{ $article->viewers }}" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="ratings">Ratings</label>
+                                <input type="number" value="{{ $article->ratings }}" min="1" max="5" placeholder="must not greater than 5" required class="form-control" name="ratings"
+                                    value="{{ old('ratings') }}" required>
                             </div>
                             <button class="btn btn-primary">Edit Post</button>
                         </form>
