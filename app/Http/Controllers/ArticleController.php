@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Article;
+use App\PostGenre;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
@@ -51,17 +52,10 @@ class ArticleController extends Controller
         // return $request;
         $article = new Article();
         $article->title = $request->title;
-        // $dir = "public/photo";
-        // $thumbnail = $request->file('thumbnail');
-        // $tname = uniqid() . "_" . $thumbnail->getClientOriginalName();
-        // Storage::putFileAs($dir, $thumbnail, $tname);
-
         $dir2 = "public/poster";
         $poster = $request->file('poster');
         $pname = uniqid() . "_" . $poster->getClientOriginalName();
         Storage::putFileAs($dir2, $poster, $pname);
-
-        // $article->thumbnail = $tname;
         $article->poster = $pname;
         $article->download = $request->download;
         $article->content = $request->content;
@@ -70,6 +64,12 @@ class ArticleController extends Controller
         $article->ratings = $request->ratings;
         $article->user_id = Auth::id();
         $article->save();
+        foreach ($request->genre as $g) {
+            $pg = new PostGenre();
+            $pg->post_id = $article->id;
+            $pg->genre_id = $g;
+            $pg->save();
+        }
         return redirect()->route("article.create")->with('status', '<p class="alert alert-success">Article is created successfully</p>');
     }
 

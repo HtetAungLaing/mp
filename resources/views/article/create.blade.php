@@ -54,6 +54,18 @@
                                 </select>
                             </div>
                             <div class="form-group">
+                                <label for="">Tags</label>
+                                @foreach ($genres as $g)
+                                    {{-- $genres -> view:share --}}
+
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" name="genre[]" id="genre{{ $g->id }}" value="{{ $g->id }}"
+                                            {{ old('genre') && in_array($g->id, old('genre')) ? 'checked' : '' }}>
+                                        <label class="custom-control-label" for="genre{{ $g->id }}">{{ $g->name }}</label>
+                                    </div>
+                                @endforeach
+                            </div>
+                            <div class="form-group">
                                 <label for="viewers">Viewers</label>
                                 <input type="text" required class="form-control" name="viewers" value="{{ old('viewers') }}" required>
                             </div>

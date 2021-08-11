@@ -76,6 +76,9 @@
                                     <a class="dropdown-item" href="{{ route('category.index') }}">Category Lists</a>
                                     <a class="dropdown-item" href="{{ route('category.create') }}">Create Category</a>
                                     <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="{{ route('genre.index') }}">Tag Lists</a>
+                                    <a class="dropdown-item" href="{{ route('genre.create') }}">Create Tags</a>
+                                    <div class="dropdown-divider"></div>
                                     <a class="dropdown-item" href="{{ route('feedback.index') }}">Feedbacks</a>
 
                                 </div>

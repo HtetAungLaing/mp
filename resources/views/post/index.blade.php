@@ -67,17 +67,10 @@
                 </div>
             </div>
         </div>
-        {{-- <div class="row">
-            <div class="col-12 overflow-hidden">
-                <div class="w-75 mx-auto p-1 mt-2 blur rounded">
-                    <div class="d-flex justify-content-center align-items-center">
-                        <a href="#"><i class="feather-facebook my-white"></i></a>
-                        <a href="#"><i class="feather-mail my-white"></i></a>
-                        <a href="#"><i class="feather-smartphone my-white"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div> --}}
+        <!-- Modal -->
+        @component('components.modal')
+
+        @endcomponent
         <div class="row">
             {{-- @foreach (\App\Category::all() as $a) --}}
             @for ($c = 0; $c < \App\Category::all()->count(); $c++)
@@ -89,9 +82,9 @@
                         </div>
                     </div>
                 </div>
-                @foreach (\App\Article::where('category_id', $c + 1)->latest()->limit(3)->get()
+                @foreach (\App\Article::where('category_id', $c + 1)->latest()->limit(4)->get()
     as $p)
-                    <div class="col-4 px-1">
+                    <div class="col-6 px-1">
                         <div class="w-100 shadow">
                             <div class="thumbnail rounded position-relative" style="background-image: url('{{ asset('storage/poster/' . $p->poster) }}')">
                                 <div class="thumbnail-button-wrapper blur-dark justify-content-center align-items-center">
@@ -133,6 +126,11 @@
     </div>
     @component('components.js')
     @endcomponent
+    <script>
+        $('.carousel').carousel({
+            interval: 3000
+        })
+    </script>
 </body>
 
 </html>

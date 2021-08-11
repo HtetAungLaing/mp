@@ -61,20 +61,17 @@
         </div>
         <div class="row">
             <div class="col-12">
-                <a href="{{ route('post.index') }}">
-                    <div class=" mx-2">
-                        <button class="btn btn-success btn-sm p-1"><i class=" feather-arrow-left mr-2"></i>Back</button>
-                        <p class="text-success d-inline-block">{{ \App\Category::where('id', $article[0]->category_id)->get()[0]->name }}</p>
-                    </div>
-                </a>
+                <div class=" mx-2">
+                    <p class="text-success d-inline-block">{{ \App\Genre::find($posts[0]->pivot->genre_id)->name }} Videos</p>
+                </div>
             </div>
         </div>
         @component('components.modal')
 
         @endcomponent
         <div class="row">
-            @foreach ($article as $p)
-                <div class="col-6 px-1">
+            @foreach ($posts as $p)
+                <div class="col-4 px-1">
                     <div class="w-100 shadow">
                         <div class="thumbnail rounded position-relative" style="background-image: url('{{ asset('storage/poster/' . $p->poster) }}')">
                             <div class="thumbnail-button-wrapper blur-dark justify-content-center align-items-center">

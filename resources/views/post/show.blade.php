@@ -61,16 +61,19 @@
         </div>
         <div class="row">
             <div class="col-12">
-                <a class="btn btn-success btn-sm p-1" href="{{ route('post.index') }}"><i class=" feather-arrow-left mr-2"></i>Back</a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12">
                 <div class="my-3">
-                    <a href="#" class="badge badge-info"><i class="feather-layers mr-2"></i>{{ \App\Category::find($post->category_id)->name }}</a>
+                    {{-- <a href="#" class="badge badge-info"><i class="feather-layers mr-2"></i>{{ \App\Category::find($post->category_id)->name }}</a> --}}
                     <a href="#" class="badge badge-success"><i class="feather-calendar mr-2"></i>{{ $post->created_at->diffForHumans() }}</a>
                     <a href="#" class="badge badge-primary"><i class="feather-eye mr-2"></i>{{ $post->viewers }}</a>
                 </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-12">
+                @foreach ($genres as $g)
+                    <a href="{{ route('pbg.index', $g->id) }}" class="badge badge-pill badge-secondary">{{ $g->name }}</a>
+                @endforeach
             </div>
         </div>
         <div class="row">
@@ -81,12 +84,15 @@
                 </div>
             </div>
         </div>
+        @component('components.modal')
+
+        @endcomponent
         <div class="row">
             <div class="col-12 mb-2">
                 <small class="text-success">Hot Videos 🔥</small>
             </div>
             @foreach ($relateds as $r)
-                <div class="col-4 px-1">
+                <div class="col-6 px-1">
                     <div class="w-100 shadow">
                         <div class="thumbnail rounded position-relative" style="background-image: url('{{ asset('storage/poster/' . $r->poster) }}')">
                             <div class="thumbnail-button-wrapper blur-dark justify-content-center align-items-center">

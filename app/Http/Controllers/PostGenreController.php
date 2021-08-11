@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Article;
-use App\Post;
+use App\PostGenre;
 use Illuminate\Http\Request;
 
-class PostController extends Controller
+class PostGenreController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +14,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Article::orderBy("id", "desc")->paginate(10)->onEachSide(2);
-        $relateds = \App\Article::inRandomOrder()->limit(3)->get();
-        return view("post.index", compact('posts', 'relateds'));
+        //
     }
 
     /**
@@ -44,29 +41,21 @@ class PostController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Post  $post
+     * @param  \App\PostGenre  $postGenre
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(PostGenre $postGenre)
     {
-
-        $posts = new Article();
-        $genres = $posts::find($id)->genre;
-        if ($post = $posts::find($id)) {
-            $relateds = $posts::inRandomOrder()->limit(4)->get();
-            return view("post.show", compact('post', 'relateds', 'genres'));
-        } else {
-            return abort(404);
-        }
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Post  $post
+     * @param  \App\PostGenre  $postGenre
      * @return \Illuminate\Http\Response
      */
-    public function edit(Post $post)
+    public function edit(PostGenre $postGenre)
     {
         //
     }
@@ -75,10 +64,10 @@ class PostController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Post  $post
+     * @param  \App\PostGenre  $postGenre
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Post $post)
+    public function update(Request $request, PostGenre $postGenre)
     {
         //
     }
@@ -86,10 +75,10 @@ class PostController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Post  $post
+     * @param  \App\PostGenre  $postGenre
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Post $post)
+    public function destroy(PostGenre $postGenre)
     {
         //
     }

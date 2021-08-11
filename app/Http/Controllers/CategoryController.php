@@ -90,6 +90,6 @@ class CategoryController extends Controller
     public function destroy(Category $category)
     {
         $category->delete();
-        return redirect()->route("category.index")->with('del-status', "<p class='alert alert-warning'>Edited successfully</p>");
+        return redirect()->route("category.index")->with('del-status', "<p class='alert alert-warning'>Deleted successfully</p>");
     }
 }

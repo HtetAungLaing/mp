@@ -3,11 +3,12 @@
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
     </ol>
     <div class="carousel-inner">
         @php
             $a = \App\Article::latest()
-                ->limit(3)
+                ->limit(4)
                 ->get();
         @endphp
         <div class="carousel-item active">
@@ -22,6 +23,11 @@
         </div>
         <div class="carousel-item">
             <div class="slide-box rounded" style="background: url('{{ asset('storage/poster/' . $a[2]->poster) }}');">
+            </div>
+            {{-- <img class="d-block" style="width: 100%;" src="{{ asset('storage/poster/' . $a[0]->poster) }}" alt=" {{ $a[0]->title }}"> --}}
+        </div>
+        <div class="carousel-item">
+            <div class="slide-box rounded" style="background: url('{{ asset('storage/poster/' . $a[3]->poster) }}');">
             </div>
             {{-- <img class="d-block" style="width: 100%;" src="{{ asset('storage/poster/' . $a[0]->poster) }}" alt=" {{ $a[0]->title }}"> --}}
         </div>

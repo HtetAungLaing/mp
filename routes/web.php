@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::prefix("/myanmarporn")->group(function () {
     Route::resource("article", "ArticleController");
     Route::resource("category", "CategoryController");
+    Route::resource("genre", "GenreController");
     Auth::routes();
     Route::get('/home', 'HomeController@index')->name('home');
     Route::get('/feedback', 'FeedbackController@index')->name('feedback.index');
@@ -39,3 +40,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/feedback', 'FeedbackController@store')->name('feedback.store');
 
 Route::get('/pbc/{id}', "PostByCat@index")->name('pbc.index');
+Route::get('pbg/{id}', "GenreController@showPostByGenre")->name('pbg.index');
