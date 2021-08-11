@@ -11,6 +11,7 @@
     <title>My Darkside Collection</title>
     @component('components.css')
     @endcomponent
+    <meta name="exoclick-site-verification" content="86c2b5c654d60c0f691e98c9c704976a">
     <style>
         html,
         body {
