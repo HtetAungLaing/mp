@@ -36,14 +36,40 @@
                 </div>
             </div>
         </div>
+
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center">
+                <script async type="application/javascript" src="https://a.realsrv.com/ad-provider.js"></script>
+                <ins class="adsbyexoclick" data-zoneid="4384350"></ins>
+                <script>
+                    (AdProvider = window.AdProvider || []).push({
+                        "serve": {}
+                    });
+                </script>
+            </div>
+        </div>
+
         <div class="row">
             <div class="col-12 overflow-hidden">
-                <div class="mt-5">
+                <div class="my-2">
                     @component('components.slider')
                     @endcomponent
                 </div>
             </div>
         </div>
+
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center">
+                <script async type="application/javascript" src="https://a.realsrv.com/ad-provider.js"></script>
+                <ins class="adsbyexoclick" data-zoneid="4384350"></ins>
+                <script>
+                    (AdProvider = window.AdProvider || []).push({
+                        "serve": {}
+                    });
+                </script>
+            </div>
+        </div>
+
         <!-- Modal -->
         @component('components.modal')
 
@@ -84,6 +110,16 @@
                         </div>
                     </div>
                 @endforeach
+
+                <div class="col-12 d-flex justify-content-center">
+                    <script async type="application/javascript" src="https://a.realsrv.com/ad-provider.js"></script>
+                    <ins class="adsbyexoclick" data-zoneid="4384350"></ins>
+                    <script>
+                        (AdProvider = window.AdProvider || []).push({
+                            "serve": {}
+                        });
+                    </script>
+                </div>
             @endfor
             {{-- @endforeach --}}
 

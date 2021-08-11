@@ -69,6 +69,17 @@
                 </a>
             </div>
         </div>
+
+        <div class="col-12 d-flex justify-content-center">
+            <script async type="application/javascript" src="https://a.realsrv.com/ad-provider.js"></script>
+            <ins class="adsbyexoclick" data-zoneid="4384350"></ins>
+            <script>
+                (AdProvider = window.AdProvider || []).push({
+                    "serve": {}
+                });
+            </script>
+        </div>
+
         @component('components.modal')
 
         @endcomponent
@@ -97,6 +108,17 @@
                     </div>
                 </div>
             @endforeach
+        </div>
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center">
+                <script async type="application/javascript" src="https://a.realsrv.com/ad-provider.js"></script>
+                <ins class="adsbyexoclick" data-zoneid="4384344"></ins>
+                <script>
+                    (AdProvider = window.AdProvider || []).push({
+                        "serve": {}
+                    });
+                </script>
+            </div>
         </div>
     </div>
     @component('components.js')
