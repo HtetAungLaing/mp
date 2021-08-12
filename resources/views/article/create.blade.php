@@ -35,7 +35,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="">Poster (Landscape size)</label>
-                                <input type="file" required class="form-control p-1" name="poster" placeholder="landscape size" required>
+                                <input type="file" accept="image/jpg,image/png" required class="form-control p-1" name="poster" placeholder="landscape size" required>
                             </div>
                             <div class="form-group">
                                 <label for="">Download Link</label>

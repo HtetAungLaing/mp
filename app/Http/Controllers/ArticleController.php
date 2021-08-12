@@ -50,6 +50,9 @@ class ArticleController extends Controller
         //     "og_photo" => "mimes:png,jpg,jpeg"
         // ]);
         // return $request;
+        $request->validate([
+            "poster" => "mimes:png,jpg,jpeg"
+        ]);
         $article = new Article();
         $article->title = $request->title;
         $dir2 = "public/poster";
@@ -109,6 +112,9 @@ class ArticleController extends Controller
     }
     public function update(Request $request, Article $article)
     {
+        $request->validate([
+            "poster" => "mimes:png,jpg,jpeg"
+        ]);
         $article->title = $request->title;
         $article->download = $request->download;
         $article->content = $request->content;
