@@ -51,10 +51,14 @@ class PostController extends Controller
     {
 
         $posts = new Article();
-        $genres = $posts::find($id)->genre;
-        if ($post = $posts::find($id)) {
-            $relateds = $posts::inRandomOrder()->limit(4)->get();
-            return view("post.show", compact('post', 'relateds', 'genres'));
+        if ($posts::find($id)) {
+            $genres = $posts::find($id)->genre;
+            if ($post = $posts::find($id)) {
+                $relateds = $posts::inRandomOrder()->limit(4)->get();
+                return view("post.show", compact('post', 'relateds', 'genres'));
+            } else {
+                return abort(404);
+            }
         } else {
             return abort(404);
         }
