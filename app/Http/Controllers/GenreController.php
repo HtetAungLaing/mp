@@ -15,6 +15,10 @@ class GenreController extends Controller
     public function showPostByGenre($id)
     {
         $genre = new Genre();
+        // $posts = $genre::find($id)->getPost;
+        // return view("postbygenre.index", compact('posts'));
+
+
         if ($genre::find($id)) {
             $posts = $genre::find($id)->getPost;
             return view("postbygenre.index", compact('posts'));

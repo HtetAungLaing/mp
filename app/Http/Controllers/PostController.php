@@ -62,6 +62,13 @@ class PostController extends Controller
         } else {
             return abort(404);
         }
+        // $genres = $posts::find($id)->genre;
+        // if ($post = $posts::find($id)) {
+        //     $relateds = $posts::inRandomOrder()->limit(4)->get();
+        //     return view("post.show", compact('post', 'relateds', 'genres'));
+        // } else {
+        //     return abort(404);
+        // }
     }
 
     /**
