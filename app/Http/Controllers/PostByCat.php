@@ -15,7 +15,11 @@ class PostByCat extends Controller
     public function index($id)
     {
         $article = Article::where('category_id', $id)->latest()->get();
-        return view('postbycat.index', compact('article'));
+        if (isset($article[$id])) {
+            return view('postbycat.index', compact('article'));
+        } else {
+            abort(404);
+        }
     }
 
     /**
