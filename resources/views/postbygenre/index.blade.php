@@ -62,7 +62,7 @@
         <div class="row">
             <div class="col-12">
                 <div class=" mx-2">
-                    <p class="text-success d-inline-block">{{ \App\Genre::find($posts[0]->pivot->genre_id)->name }} Videos</p>
+                    {{-- <p class="text-success d-inline-block">{{ \App\Genre::find($posts[0]->pivot->genre_id)->name }} Videos</p> --}}
                 </div>
             </div>
         </div>
