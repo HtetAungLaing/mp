@@ -64,7 +64,7 @@
                 <a href="{{ route('post.index') }}">
                     <div class=" mx-2">
                         <button class="btn btn-success btn-sm p-1"><i class=" feather-arrow-left mr-2"></i>Back</button>
-                        <p class="text-success d-inline-block">{{ \App\Category::where('id', $article[0]->category_id)->get()[0]->name }}</p>
+                        {{-- <p class="text-success d-inline-block">{{ \App\Category::where('id', $article[0]->category_id)->get()[0]->name }}</p> --}}
                     </div>
                 </a>
             </div>
@@ -83,6 +83,7 @@
         @component('components.modal')
 
         @endcomponent
+
         <div class="row">
             @foreach ($article as $p)
                 <div class="col-6 px-1">
